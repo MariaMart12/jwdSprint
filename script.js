@@ -50,7 +50,7 @@ function validateForm() {
   }
 
   //date
-  if (dateValue.value == "" ) {
+  if (dateValue.value == "") {
     setError(dateValue, "*Please Choose Your Due Date");
   } else {
     setSuccess(dateValue);
