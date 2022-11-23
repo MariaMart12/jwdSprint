@@ -31,8 +31,8 @@
     <title>Sprint 1</title>
   </head>
   <body>
-    <!--Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary sticky-top" id="mainNav" >
+     <!--Navigation-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-secondary sticky-top" id="mainNav" >
       <div class="container px-4 px-lg-5 ">
          <a class="navbar-brand text-white fw-bold">CodeDen</a>
         <button
@@ -136,64 +136,58 @@
           <div class="card shadow-lg" >
             <div class="card-body">
               <h5 class="card-title text-center mb-5 fs-9 bg-secondary text-white py-5">Tasks Form</h5>
-              <form action="" id="form">
-                <div class="form-row">
-                  <div class="col-lg-8 mx-auto input-group" >
-                    <!--Input Task-->
-                    <input
+              <form id="form" action="#task-card" method="GET" >
+                 <!--Input Task-->
+                <div class="input-group">
+                  <label for="inputValue">Task Name </label>
+                  <input
                       id="InputValue"
                       type="text"
-                      class="form-control bg-light text-muted mb-3  "
                       placeholder="Task Name"
+                      name="InputValue"
                     />
                     <p>Error message</p>
-                  </div>
                 </div>
                 <!--Input assigned-->
-                <div class="col-lg-8 mx-auto input-group">
-                  <select id="assignValue"
-                    class="form-select mb-5 my-4 text-muted"
-                    aria-label="Default select example"
-                  >
+                <div class="input-group">
+                  <label for="assignValue">Assign To</label>
+                  <select id="assignValue" name="assignValue">
                     <option value="">Assigned To</option>
                     <option value="1">Maria</option>
                     <option value="2">Riki</option>
                     <option value="3">Shahan</option>
+                    <option value="4">Ben</option>
                   </select>
+                  <p>Error Message</p>
                 </div>
                 <!--Input Status-->
-                <div class="col-lg-8 mx-auto input-group">
-                  <select id="statusValue"
-                    class="form-select mb-5 my-4 text-muted"
-                    aria-label="Default select example"
-                  >
+                <div class="input-group">
+                  <label for="statusValue">Status</label>
+                  <select id="statusValue" name="statusValue">
                     <option value="">Status</option>
                     <option value="1">Started</option>
                     <option value="2">In-Progress</option>
                     <option value="3">Revieved</option>
                     <option value="4">Finished</option>
                   </select>
+                  <p>Error Message</p>
                 </div>
-               
-                  <!--Due Date-->
                 <div class="col-lg-8 mx-auto mt-5 text-dark input-group">
-                  <label for="">Due Date :</label>
-                 <input id="dateValue" type="datetime-local" name="duedate"/>
-               </div>
-                <div class="for-row mt-5 input-group">
-                  <div class="col-lg-8 mx-auto">
-                    <textarea
-                      name=""
-                      id="descValue"
-                      cols="30"
-                      class="form-control bg-light"
-                      placeholder="Description"
-                      rows="7"
-                    ></textarea>
-                  </div>
+                  <label for="dateValue">Due Date :</label>
+                 <input id="dateValue" type="datetime-local" name="dateValue"/>
+                 <p>Error Message</p>
                 </div>
-                <a href="#task-card" class="btn btn-secondary fw-bolder mt-5" id="submitBtn">Submit</a>
+                 <!--Due Date-->
+                <div class="input-group">
+                  <label for="descValue">Description </label>
+                  <textarea id="descValue" name="descValue" rows="4" cols="50"></textarea>
+                  <p>Error Message</p>
+                </div>
+                
+                <button type="submit" class="btn btn-warning">Submit</button>
+                <input type="reset" class="btn btn-warning ms-5" >
               </form>
+          
              
             </div>
           </div>
