@@ -1,7 +1,7 @@
 //Form Validation
 
 //Variable Target///
-
+/*
 const inputValue = document.getElementById("InputValue");
 const assignValue = document.getElementById("assignValue");
 const statusValue = document.getElementById("statusValue");
@@ -67,4 +67,12 @@ function setError(element, errorMessage) {
      }
      parent.classList.add("success");
    }
-   
+   */
+
+let time = document.getElementById('dateNtime')
+let current = new Date();
+//let cDate =  current.getDate() + '-' + (current.getMonth() + 1) + '-' current.getFullYear(); 
+let cDate = `${current.getDate()} / ${(current.getMonth() + 1)} / ${current.getFullYear()}`
+let cTime = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+let dateTime = cDate + ' ' + cTime;
+time.innerHTML = dateTime; 
