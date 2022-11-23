@@ -69,10 +69,11 @@ function setError(element, errorMessage) {
    }
    */
 
+const months = ['January', 'February', "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 let time = document.getElementById('dateNtime')
 let current = new Date();
-//let cDate =  current.getDate() + '-' + (current.getMonth() + 1) + '-' current.getFullYear(); 
-let cDate = `${current.getDate()} / ${(current.getMonth() + 1)} / ${current.getFullYear()}`
+//let cDate = `${current.getDate()} / ${(current.getMonth() + 1)} / ${current.getFullYear()}`
+let cDate = `${current.getDate()}  ${months[current.getMonth()]}  ${current.getFullYear()} <br>`
 let cTime = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
 let dateTime = cDate + ' ' + cTime;
 time.innerHTML = dateTime; 
